@@ -15,7 +15,7 @@ func main() {
 
 	msg := "hello"
 	select {
-	case messages <- msg:
+	case messages <- msg: // buffered or no buffer
 		fmt.Println("send hello")
 	default:
 		fmt.Println("no send")
